@@ -1,0 +1,4 @@
+services:
+  sequence-frequency:
+    build: .
+    image: "jhawk7/sequence-frequency"
