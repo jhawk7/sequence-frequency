@@ -7,11 +7,11 @@ Download the go runtime from the link to the page below. This page will also con
 This application can also be ran via docker (see instructions for running with docker)
 
 ## Running Application with Go
-The application can accept arguments via the command line or stdin. You can choose to run the application with `go run main.go` providing it with agrguments, or you can use `go build` to compile your own executable and run it directly from the binary. The pre-compiled binary `sequence-frequency` (compiled using macOS x86_64) is provided and can be found in the root directory of this repo.
+The application can accept arguments via the command line or stdin. You can choose to run the application with `go run main.go` providing it with agrguments, or you can use `go build` to compile your own executable and run it directly from the binary. The pre-compiled binary `sequence-frequency` (compiled using macOS x86_64) is provided and can be found in the `bin` directory of this repo.
 - `go run main.go <your_file_path1> <your_file_path2>` - runs application with list of files (the results will be returned in sequential order)
 - `cat <your_file_path> | go run main.go` - pipes file contents into the application via stdin
-- `./sequence-frequency <your_file_path>` - example using bin file with cmdline arguments
-- `cat <your_file_path> | ./sequence-frequency` - example using bin file with stdin
+- `./bin/sequence-frequency <your_file_path>` - example using bin file with cmdline arguments
+- `cat <your_file_path> | ./bin/sequence-frequency` - example using bin file with stdin
 
 ## Running Application with Docker
 The application is dockerized and can be ran using `docker-compose run` or `docker run`. Before running using docker, insert your text files into the `texts/` directory of the application. Then, pass the path to the text files in the docker command (pass via stdin or commandline argument).
