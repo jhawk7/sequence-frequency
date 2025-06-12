@@ -1,4 +1,4 @@
-# Sequence Frequecy
+# Sequence Frequecy ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=flat&logo=go&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white) 
 This golang application parses a given text file (or a list of text files) and returns the top 100 most frequent sequences - comprised of 3 words.
 
 ## Setting up environment
@@ -33,4 +33,4 @@ Tests in this application are split up by packages (pkg). Each package has its o
 
 ## Epilogue
 - I was able to get this to process text files pretty quickly by taking advantage of Go's channels and goroutines, as well as the underlying heap-map data structure. This application could be more resilient if implemented as a worker scaled horizontally and subscribed to a queue
-- The output frequencies were not the exact same as what was given in the example output (86 vs 85 for "the sperm whale")
+- The output frequencies were not the exact same as what was given in the sample output (86 vs 85 for "the sperm whale")
