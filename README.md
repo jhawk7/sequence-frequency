@@ -34,3 +34,4 @@ Tests in this application are split up by packages (pkg). Each package has its o
 ## Epilogue
 - I was able to get this to process text files pretty quickly by taking advantage of Go's channels and goroutines, as well as the underlying heap-map data structure. This application could be more resilient if implemented as a worker scaled horizontally and subscribed to a queue
 - The output frequencies were not the exact same as what was given in the sample output (86 vs 85 for "the sperm whale")
+- The underlying data structure used to keep track of the top k sequence frequencies is map of sequences to nodes organized in a max heap. A better approach would be to use a **min heap of size k** to prevent the use of extra memory storing every possible sequence within the heap and to cut down on the time to update the heap (Ologk << Ologn)
